@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <img src="Zephyr.png" alt="Logo" class="logo">
+        <nav class="navbar">
+            <a href="home.html" class="nav-button">Forecast</a>
+            <a href="activities.html" class="nav-button">Schedule</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="top-container">
+            <section class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" id="locationInput" placeholder="Enter city" aria-label="City Input">
+                    <button id="searchButton" aria-label="Search Weather" role="button">Search</button>
+                </div>
+            </section>            
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">Loading...</div>
+
+        <div class="bottom-container">
+            <div class="weather-info-container">
+                <section class="weather-info">
+                    <div class="main-weather-details">
+                        <div id="location" class="location"></div>
+                        <img id="weatherIcon" alt="Weather Icon" class="weather-icon">
+                        <div id="weatherCondition" class="weather-condition"></div>
+                        <div id="date" class="date"></div>
+                        <div id="localTime" class="local-time"></div>
+                    </div>
+                    <section class="categories">
+                        <div class="category">
+                            <label>Temperature</label>
+                            <div id="currentTemperature"></div>
+                        </div>
+                        <div class="category">
+                            <label>Wind Speed</label>
+                            <div id="windSpeed"></div>
+                        </div>
+                        <div class="category">
+                            <label>Humidity</label>
+                            <div id="humidity"></div>
+                        </div>
+                        <div class="category">
+                            <label>Chance of Rain</label>
+                            <div id="chanceOfRain"></div>
+                        </div>
+                    </section>
+                    <section class="forecast-info">
+                        <h3>Weekly Forecast</h3>
+                        <br>
+                        <div id="forecast" class="forecast"></div>
+                    </section>
+                </section>
+            </div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <div id="placeholderMessage" class="placeholder-message"></div>
+        </div>
+    </div>
+
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Index</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Zephyr. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

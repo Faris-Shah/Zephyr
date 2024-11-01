@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    background: url(Sky.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.header {
+    background-color: #8eb3df; /* Keep the existing background color */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.header .logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.navbar {
+    display: flex; /* Use flexbox for navbar */
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-button {
+    background-color: #0045cc; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 5px; /* Spacing between buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.nav-button:hover {
+    background-color: #1e62ff; /* Button hover color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1; /* Allow the container to expand */
+}
+
+.activity-section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.bottom-container {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit max width */
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-container {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit max width */
+    margin-bottom: 20px; /* Space below the form */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center text inside the container */
+}
+
+#activityForm input,
+#activityForm textarea,
+#editActivityForm input,
+#editActivityForm textarea {
+    width: 90%; /* Set width to 90% of the container */
+    max-width: 600px; /* Maximum width for input elements */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #0045cc;
+    border-radius: 8px;
+    font-size: 16px;
+    display: block; /* Ensure they are block elements */
+    margin-left: auto; /* Center the element */
+    margin-right: auto; /* Center the element */
+}
+
+#activityForm button,
+#editActivityForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0045cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 8px;
+}
+
+#activityForm button:hover,
+#editActivityForm button:hover {
+    background-color: #1e62ff;
+}
+
+.bottom-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.activity-card {
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    color: #0045cc;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.activity-card p {
+    margin: 5px 0;
+}
+
+.activity-card button {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.activity-card .delete-btn {
+    background-color: #e94e4e;
+}
+
+.activity-card .delete-btn:hover {
+    background-color: #cc4444;
+}
+
+.activity-card .update-btn {
+    background-color: #007bff;
+}
+
+.activity-card .update-btn:hover {
+    background-color: #0056b3;
+}
+
+.activity-card .checklist-btn {
+    background-color: #28a745;
+}
+
+.activity-card .checklist-btn:hover {
+    background-color: #218838;
+}
+
+.back-button-container {
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+}
+
+.back-button {
+    background-color: azure; /* Color for the button */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.back-button:hover {
+    background-color: lightblue; /* Darker shade on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #8eb3df; /* Same color as the header */
+    color: white; /* Text color for the footer */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add some padding */
+    width: 100%; /* Full width */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Limit max width */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.modal-content h2 {
+    text-align: center; /* Center the text */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

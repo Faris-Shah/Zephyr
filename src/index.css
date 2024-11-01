@@ -1,0 +1,28 @@
+html, body {
+  height: 100%; /* Set height to 100% for html and body */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #daeaf6; /* Change background color */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+a {
+  display: inline-block; /* Make the link behave like a button */
+  background-color: #8dd6ee; /* Light blue color for the button */
+  color: #000; /* Text color */
+  padding: 0.5rem 1rem; /* Padding for the button */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+a:hover {
+  background-color: #3f9be2; /* Change button color on hover */
+}

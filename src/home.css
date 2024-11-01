@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(Sky.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Sticky header */
+.header {
+    background-color: #8eb3df; /* Keep the existing background color */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.header .logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.navbar {
+    display: flex; /* Use flexbox for navbar */
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.nav-button {
+    background-color: #0045cc; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 5px; /* Spacing between buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.nav-button:hover {
+    background-color: #1e62ff; /* Button hover color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center align items */
+    margin-top: 20px;
+}
+
+.top-container {
+    width: 100%; /* Ensure full width for left container */
+    display: flex;
+    justify-content: center; /* Center the search bar */
+}
+
+/* Search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Limit max width for larger screens */
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 15px; /* Add padding for text */
+    font-size: 18px;
+    border: 2px solid #333;
+    border-right: none; /* Remove right border to blend with button */
+    border-radius: 10px 0 0 10px; /* Rounded left corners */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.search-wrapper button {
+    padding: 10px 15px; /* Same padding as input for uniform height */
+    font-size: 18px;
+    background-color: #0045cc;
+    color: white;
+    border: 2px solid #333;
+    border-left: none; /* Remove left border to blend with input */
+    border-radius: 0 10px 10px 0; /* Rounded right corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 100%; /* Match input height */
+}
+
+.search-wrapper button:hover {
+    background-color: #1e62ff;
+}
+
+.placeholder-message {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.weather-info-container {
+    background-color: rgba(211, 211, 211, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 20px auto; /* Center the weather info container */
+}
+
+.weather-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location, .weather-condition, .local-time, .date {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0045cc;
+    margin: 10px 0;
+}
+
+.weather-icon {
+    width: 100px;
+    height: auto;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 20px;
+    color: #0045cc;
+    width: 180px;
+    font-weight: 500;
+}
+
+.category label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.forecast-info {
+    margin-top: 20px;
+    max-width: 100%; /* Keep this to allow it to take full width */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around; /* Space out the forecast cards */
+    gap: 15px; /* Maintain gap between cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.forecast-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 120px; /* Set a fixed width for the forecast cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 auto; /* Allow cards to grow and shrink */
+    min-width: 120px; /* Ensure minimum width to fit the design */
+    max-width: 180px; /* Set a max width for larger screens */
+}
+
+.forecast-icon {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.forecast-info h3 {
+    font-size: 28px; /* Increase the font size */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.activities {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Center the activity button */
+.activity-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#activityButton {
+    background-color: #00bfff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.activity-card {
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-button-container {
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+}
+
+.back-button {
+    background-color: azure; /* Color for the button */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.back-button:hover {
+    background-color: lightblue; /* Darker shade on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #8eb3df; /* Same color as the header */
+    color: white; /* Text color for the footer */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add some padding */
+    position: relative; /* Allow for normal flow */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    margin-top: auto; /* Push it to the bottom if using flexbox */
+}
